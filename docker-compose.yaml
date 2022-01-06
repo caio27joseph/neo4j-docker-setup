@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  neo4j:
+    image: neo4j:latest
+    container_name: neo4j
+    volumes:
+      - './data:/data'
+      - './logs:/logs'
+      - './import:/var/lib/neo4j/import'
+      - './plugins:/plugins'
+    ports:
+      - '7474:7474'
+      - '7687:7687'
+    env_file:
+      - .env
+

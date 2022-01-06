@@ -1,0 +1,8 @@
+# Volumes
+data
+import
+logs
+plugin
+
+# Env
+.env
